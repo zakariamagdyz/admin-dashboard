@@ -6,6 +6,7 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import StoreIcon from "@mui/icons-material/Store";
 import PaymentIcon from "@mui/icons-material/Payment";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import { ListLink } from "./SideBar";
 
 const ListsCategory = () => {
   return (
@@ -15,20 +16,28 @@ const ListsCategory = () => {
       </Typography>
 
       <ListItem>
-        <PersonOutlineIcon />
-        Users
+        <ListLink to="/users">
+          <PersonOutlineIcon />
+          Users
+        </ListLink>
       </ListItem>
       <ListItem>
-        <StoreIcon />
-        Products
+        <ListLink to="/products">
+          <StoreIcon />
+          Products
+        </ListLink>
       </ListItem>
       <ListItem>
-        <PaymentIcon />
-        Orders
+        <ListLink to="/orders">
+          <PaymentIcon />
+          Orders
+        </ListLink>
       </ListItem>
       <ListItem>
-        <LocalShippingIcon />
-        Delivery
+        <ListLink to="/deleviry">
+          <LocalShippingIcon />
+          Delivery
+        </ListLink>
       </ListItem>
     </>
   );

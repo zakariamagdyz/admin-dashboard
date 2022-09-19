@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Divider from "@mui/material/Divider";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 
@@ -20,7 +20,7 @@ const Container = styled("main")`
 `;
 
 const ContentWrapper = styled("section")`
-  flex: 6;
+  flex: 4;
 `;
 
 const SidebarWrapper = styled("article")`
@@ -41,7 +41,7 @@ const Top = styled("div")`
   }
 `;
 const Center = styled("div")`
-  padding: 1rem;
+  padding-left: 0.5rem;
 `;
 const Bottom = styled("div")`
   margin-top: auto;
@@ -57,8 +57,19 @@ const List = styled("ul")`
 `;
 
 export const ListItem = styled("li")`
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ece8ff;
+  }
+`;
+
+export const ListLink = styled(Link)`
   display: flex;
   gap: 0.5em;
+  text-decoration: none;
+  color: #6439ff;
 `;
 
 const MainCategory = () => (
@@ -67,8 +78,10 @@ const MainCategory = () => (
       Main
     </Typography>
     <ListItem>
-      <DashboardIcon />
-      Dashboard
+      <ListLink to="/">
+        <DashboardIcon />
+        Dashboard
+      </ListLink>
     </ListItem>
   </>
 );

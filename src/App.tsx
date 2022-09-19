@@ -4,6 +4,8 @@ import getTheme from "./theme/theme";
 import { ThemeProvider } from "@emotion/react";
 import { Routes, Route } from "react-router-dom";
 import SideBar from "./components/SideBar/SideBar";
+import Product from "./pages/Product";
+import User from "./pages/User";
 
 const Home = lazy(() => import("./pages/Home"));
 
@@ -17,14 +19,14 @@ function App() {
         <Routes>
           <Route element={<SideBar />}>
             <Route index element={<Home />} />
-            <Route path="/user">
-              <Route index element={<div>user</div>} />
+            <Route path="/users">
+              <Route index element={<User />} />
               <Route path=":userId" element={<div>userID</div>} />
               <Route path="new" element={<div>New</div>} />
             </Route>
 
-            <Route path="/product">
-              <Route index element={<div>Products</div>} />
+            <Route path="/products">
+              <Route index element={<Product />} />
               <Route path=":productId" element={<div>productId</div>} />
               <Route path="new" element={<div>new</div>} />
             </Route>

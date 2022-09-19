@@ -1,0 +1,22 @@
+:root {
+  --clr-primary-200: #f3eed9;
+  --clr-primary-400: red;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #222c2a;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-accent: "playfair Display", serif;
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.375rem;
+  --fs-700: 2rem;
+
+  @media (min-width: 45em) {
+    --fs-400: 1.125rem;
+    --fs-500: 1.375rem;
+    --fs-600: 2.75rem;
+    --fs-700: 4.125rem;
+  }
+}
